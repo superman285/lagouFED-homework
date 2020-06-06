@@ -24,17 +24,12 @@
 
 分为标记阶段和清除阶段 二个阶段完成。
 
-```mermaid
-graph TD
-遍历所有对象并对活动对象进行标记 --> 移动对象位置整理地址空间 
-移动对象位置整理地址空间 --> 清除无标记对象和清除之前所做标记
+```flow
+op=>operation: 遍历所有对象并对活动对象进行标记
+op2=>operation: 移动对象位置整理地址空间
+op3=>operation: 清除无标记对象和清除之前所做标记
+op->op2->op3
 ```
-
-
-
-
-
-
 
 
 
@@ -42,13 +37,13 @@ graph TD
 
 新生代内存区分为使用空间From，空间空间To 等大小空间
 
-``` mermaid
-graph TD
-活动对象存储于From空间 --> 进行标记整理后将活动对象拷贝到To空间 
-进行标记整理后将活动对象拷贝到To空间 --> From空间与To交换空间完成释放
-```
+ ```flow
+op=>operation: 活动对象存储于From空间
+op2=>operation: 进行标记整理后将活动对象拷贝到To空间
+op3=>operation: From空间与To交换空间完成释放
+op->op2->op3
 
-
+ ```
 
 
 
@@ -325,7 +320,7 @@ let ex4 = function (n) {
 解答
 
 ```js
-let ex4 = n => (Maybe.of(n||undefined).map(parseInt))._value
+let ex4 = n => (Maybe.of(n||undefined).map(x=>parseInt(x)))._value
 console.log('ex4',ex4plus(0));
 // ex4 undefined
 ```
