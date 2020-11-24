@@ -1,0 +1,18 @@
+{
+  "name": "VBlog-Imitate",
+  "private": true,
+  "scripts": {
+    "build": "gridsome build",
+    "develop": "gridsome develop",
+    "explore": "gridsome explore"
+  },
+  "dependencies": {
+    "@gridsome/source-strapi": "^0.2.0",
+    "axios": "^0.21.0",
+    "dayjs": "^1.9.6",
+    "gridsome": "^0.7.0",
+    "js-base64": "^3.6.0",
+    "markdown-it": "^12.0.2",
+    "vuex": "^3.5.1"
+  }
+}
